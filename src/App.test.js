@@ -1,15 +1,15 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
-
-  expect(getByText(/learn/i)).toBeInTheDocument();
+//simple tests to see if webpage renders without crashing
+test('renders heading', () => {
+  render( <App />);
+  const headingElement = screen.getByText('Dangerous Goods');
+  expect(headingElement).toBeInTheDocument();
 });
+
+test('renders cart component without crashing', () => {
+  render( <App />);
+  expect((screen.getByText('Cart'))).toBeInTheDocument()
+})
