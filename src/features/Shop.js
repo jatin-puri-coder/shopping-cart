@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Shop(props) {
-  const { info } = props;
+  const { info, addToCart } = props;
   return (
     <div className='box col-big'>
       <h2>Products</h2>
@@ -12,7 +12,7 @@ function Shop(props) {
              <h3>{info.name}</h3>
              <p>${info.price}</p>
            <div>
-             <button>Add to Cart</button>
+             <button onClick={() => addToCart(info)}>Add to Cart</button>
            </div>
          </div>
         )) }
