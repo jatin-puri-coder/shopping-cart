@@ -1,3 +1,11 @@
+I created this project using 'Create React App' with 'Redux'. To run the app in development mode, run `npm start`.
+
+I spent a little more than 2 hours on the project but was unable to complete all tasks. I decided to create the project using just React and Usestate with the intention of changing it to redux store after it was all working but ran out of time. I was only able to write actions & reducers before realizing that I'd need much more time to connect it all up.
+
+I believe testing is really important when writing code but I was only able to write 2 simple tests for App.js as I only got to this point after the 2hr mark.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
