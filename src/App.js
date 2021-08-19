@@ -15,6 +15,15 @@ function App() {
         setCartItems([...cartItems, { ...product, qty: 1}])
       }
   }
+
+  const deleteFromCart = (product) => {
+      const exists = cartItems.find((item) => item.name === product.name)
+      if (exists.qty === 1) {
+        setCartItems(cartItems.filter((item) => item.name !== product.name))
+      } else {
+        setCartItems(cartItems.map((item) => item.name === product.name ? { ...exists, qty: exists.qty - 1} : item))
+      }
+  }
   return (
     <div className="App">
       <header className="header">
@@ -23,7 +32,7 @@ function App() {
       <div className='row'>
         {/* info is passed to the Shop component as it will be used & displayed here*/}
         <Shop addToCart={ addToCart } info={ info }></Shop>
-        <Cart addToCart={ addToCart } cartItems={ cartItems }></Cart>
+        <Cart addToCart={ addToCart } deleteFromCart={ deleteFromCart } cartItems={ cartItems }></Cart>
       </div>
     </div>
   );

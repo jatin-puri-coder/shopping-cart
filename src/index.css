@@ -7,11 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .header {
   flex-direction: column;
   text-align: center;
@@ -36,4 +31,10 @@ code {
 
 .col-small {
   flex: 1;
+}
+
+.add {
+  background-color: lightblue;
+  font-size: large;
+  margin-right: 1rem;
 }
