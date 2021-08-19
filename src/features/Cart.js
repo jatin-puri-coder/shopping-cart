@@ -6,7 +6,7 @@ function Cart(props) {
     <aside className='box col-small'>
       <h2>Cart</h2>
       <div>
-        {cartItems.length === 0 && <p>No items in cart</p>}
+        { cartItems.length === 0 && <p>No items in cart</p> }
       </div>
     </aside>
   )
