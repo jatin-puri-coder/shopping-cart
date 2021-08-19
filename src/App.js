@@ -6,8 +6,10 @@ import products from './products'
 function App() {
   //extract info from products
   const { info } = products;
+  //setting state for items in cart
   const [cartItems, setCartItems] = useState([]);
   const addToCart = (product) => {
+    //when clicking add to cart, first check if item already exists in cart. If it does add 1 to its quantity otherwise get all product data and give it a quantity of 1.
       const exists = cartItems.find((item) => item.name === product.name)
       if (exists) {
         setCartItems(cartItems.map((item) => item.name === product.name ? { ...exists, qty: exists.qty + 1} : item))
@@ -17,6 +19,7 @@ function App() {
   }
 
   const deleteFromCart = (product) => {
+    //when clicking remove button, first check if item quantity is 1. If so, then remove item using filter method. If item quantity is greater than 1 reduce quantity by 1.
       const exists = cartItems.find((item) => item.name === product.name)
       if (exists.qty === 1) {
         setCartItems(cartItems.filter((item) => item.name !== product.name))

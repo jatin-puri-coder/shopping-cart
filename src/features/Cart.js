@@ -9,6 +9,7 @@ function Cart(props) {
       <div>
         { cartItems.length === 0 && <p>No items in cart</p> }
       </div>
+      {/* map through the items in the cart and display name, quantity and price(fixed at 2 decimals) */}
       {cartItems.map((item) => (
         <div key={item.name} className='row'>
           <div>{item.name}</div>

@@ -19,7 +19,7 @@ export const deleteFromCart = (itemName) => {
 export const changeQty = (itemName, value) => {
   return {
     type: CHANGE_QTY,
-    id: itemName,
+    name: itemName,
     qty: value
   }
 }
